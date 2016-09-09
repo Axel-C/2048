@@ -15,9 +15,8 @@ public class Window extends JFrame {
 		setLayout(new BorderLayout());
 		
 		//                            GRILLE
-		JPanel grid = new JPanel();
-		grid.setLayout(new GridLayout(4, 4));
-		add(grid , BorderLayout.CENTER);
+		
+		add(Main.grid , BorderLayout.CENTER);
 		
 		//                            MENU
 		JPanel menu = new JPanel() ;
@@ -30,6 +29,7 @@ public class Window extends JFrame {
 		
 		
 	}
+	
 	
 	
 }
