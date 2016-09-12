@@ -1,6 +1,7 @@
 import java.awt.GridLayout;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 import javax.swing.JPanel;
 
@@ -39,17 +40,20 @@ public class Grid extends JPanel{
 				add(grid[j][i]);
 			}
 		}
+		updateUI();
 	}
 	
-	public void new2(){
+	public void randomCase(int number){
 		List<Case> possibleCase = new ArrayList();
 		for(int i = 0 ; i <  height ; i++ ){
 			for(int j = 0 ; j < width ; j++){
 				if(grid[j][i].number == 0){
-					possibleCase.add(grid);
+					possibleCase.add(grid[j][i]);
 				}
 			}
 		}
+		int r = new Random().nextInt(possibleCase.size());
+		possibleCase.get(r).set(number);
 	}
 
 }

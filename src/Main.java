@@ -7,7 +7,8 @@ public class Main {
 	
 
 	public static void main(String[] args) {
-		 grid.put(new Case(2), 2, 3);
+		grid.randomCase(2);
+		grid.randomCase(4);
 		 grid.refreshUI();
 		
 
