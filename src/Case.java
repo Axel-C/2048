@@ -18,6 +18,7 @@ public class Case extends JPanel {
 		this.number = number ; 
 		label.setText(""+number);
 		Main.grid.refreshUI();
+		
 	}
 	
 	

@@ -1,5 +1,7 @@
 import java.awt.BorderLayout;
 import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
@@ -21,7 +23,15 @@ public class Window extends JFrame {
 		//                            MENU
 		JPanel menu = new JPanel() ;
 		menu.setLayout(new BoxLayout(menu, BoxLayout.X_AXIS));
-		menu.add(new JButton("Nouvelle Partie"));
+		JButton newGame = new JButton("New Game");
+		newGame.addActionListener(new ActionListener() {
+			
+			public void actionPerformed(ActionEvent e) {
+				Main.newGame();
+				
+			}
+		});
+		menu.add(newGame);
 		add(menu , BorderLayout.SOUTH);
 		
 		

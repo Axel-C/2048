@@ -13,5 +13,12 @@ public class Main {
 		
 
 	}
+	
+	public static void newGame(){
+		grid = new Grid(4, 4);
+		grid.randomCase(2);
+		grid.randomCase(4);
+		 grid.refreshUI();
+	}
 
 }
